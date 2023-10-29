@@ -15,12 +15,11 @@ body{
 
 /* navbar */
 .container{
-    /* background: #cccc; */
     display: grid;
     grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content,16rem)) minmax(6rem, 1fr);
     grid-template-rows: repeat(3, min-content) 70vh repeat(5, min-content) ;
     row-gap: 1.6rem;
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
 .social-icon-list{
@@ -216,11 +215,9 @@ body{
 .dropdown-list-link:hover{
     color: #458a9f;
 }
-
 /* end of navbar */
 
 /* banner */
-
 .banner{
     grid-column: 2 /10;
     grid-row: 4 / 5;
@@ -329,6 +326,7 @@ body{
 }
 
 
+
 .slide-btn{
     border-radius: 50%;
     width: 1.3rem;
@@ -349,21 +347,21 @@ body{
     background-color: #12376e;
 }
 
-.slide-btn-1{
-    left: 47%;
-}
+    .slide-btn-1{
+        left: 47%;
+    }
 
-.slide-btn-2{
-    left: 49%;
-}
+    .slide-btn-2{
+        left: 49%;
+    }
 
-.slide-btn-3{
-    left: 51%;
-}
+    .slide-btn-3{
+        left: 51%;
+    }
 
-.slide-btn-4{
-    left: 53%;
-}
+    .slide-btn-4{
+        left: 53%;
+    }
 
 .slide-btn-1:focus ~ .slideshow-wrapper{
     animation: none;
@@ -507,11 +505,9 @@ body{
     background-color: #23487f;
     box-shadow: 0 1.5rem 6rem rgba(0,0,0,0.3);
 }
-
 /* end of best selling */
 
 /* gallery */
-
 .gallery{
     grid-column: 1 / -1;
     grid-row: 7 / 8;
@@ -596,5 +592,192 @@ body{
     grid-column: 7 / 9;
     grid-row: 3 / 5;
 }
-
 /* end of gallery */
+
+/* contact */
+.contact{
+    grid-column: 1 / -1;
+    grid-row: 8 / 9;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    background-color: #12376e;
+    padding: 2rem 0;
+}
+
+.contact-heading{
+    justify-self: end;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.contact-form{
+    display: flex;
+}
+
+.contact-form input{
+    outline: none;
+    padding: 0.4rem 1rem;
+    border: 0.1rem solid #fff;
+}
+
+.contact-input{
+    border-radius: 5rem 0 0 5rem;
+    border-right: none;
+}
+
+.contact-btn{
+    background: #34598f;
+    color: #fff;
+    border-radius: 0 5rem 5rem 0;
+    border-left: none;
+    transition: all 0.2s;
+}
+
+.contact-btn:hover{
+    background: #12376e;
+}
+/* end of contact */
+
+
+/* footer */
+.footer{
+    grid-column: 2 / 10;
+    grid-row: 9 / 10;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 2rem 0 3rem 0;
+    color: #34598f;
+}
+/* end of footer */
+
+/* modal box */
+.forms-wrapper{
+    background: #eee;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 2rem;
+    border: 0.1rem solid #34598f;
+    border-radius: 1rem;
+    visibility: hidden;
+    animation: anim 1s;
+}
+
+.show-btns-wrapper{
+    display: flex;
+    padding: 1rem;
+}
+
+.show-form-btn{
+    flex: 0 1 50%;
+    background: #12376e;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    border: 0.1rem solid #eee;
+    /* margin: 0 0.1rem; */
+    cursor: pointer;
+}
+
+.form-heading{
+    font-size: 2rem;
+    color: #12376e;
+    text-transform: uppercase;
+    padding: 1rem 0 0 0.2;
+}
+
+.forms-wrapper form{
+    width: 50rem;
+    padding: 1rem;
+}
+
+.forms-wrapper form input:not(.form-btn){
+    background: #fff;
+    color: #777;
+    padding: 1.3rem;
+    margin: 0.3rem 0;
+    border: 0.2rem solid #eee;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.full-name-input-wrapper{
+    display: flex;
+}
+
+.full-name-input-wrapper input{
+    width: 50%;
+}
+
+.form-input{
+    width: 100%;
+}
+
+.form-btn{
+    width: 35%;
+    background-color: #d38800;
+    color: #fff;
+    letter-spacing: 0.3rem;
+    padding: 1rem;
+    border: none;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    
+}
+
+.x-btn{
+    font-size: 2rem;
+    color: #00154c;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 3.3rem;
+    right: 3.5rem;
+    cursor: pointer;
+}
+
+.login-form{
+    display: none;
+}
+
+.show-signup-form{
+    background-color: #34598f;
+    color: #888;
+    pointer-events: none;
+}
+
+.show-login-form{
+    background-color: #34598f;
+    color: #888;
+    pointer-events: none;
+}
+
+.inactive{
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.first-nav-link label{
+    cursor: pointer;
+}
+
+@keyframes anim{
+    0%{
+        left: 40%;
+    }
+    50%{
+        left: 60%;
+    }
+    75%{
+        left: 45%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+/* end of modal box */
