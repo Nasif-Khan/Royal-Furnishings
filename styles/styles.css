@@ -11,6 +11,7 @@ html{
 body{
     box-sizing: border-box;
     font-family: 'Alegreya', sans-serif;
+
 }
 
 /* navbar */
@@ -663,7 +664,11 @@ body{
     border: 0.1rem solid #34598f;
     border-radius: 1rem;
     visibility: hidden;
-    animation: anim 1s;
+    /* animation: anim 1s; */
+}
+
+.animation-in{
+    animation: anim-in 0.7s;
 }
 
 .show-btns-wrapper{
@@ -766,18 +771,19 @@ body{
     cursor: pointer;
 }
 
-@keyframes anim{
+@keyframes anim-in{
     0%{
-        left: 40%;
+        top: 0%;
     }
     50%{
-        left: 60%;
+        top: 40%;
     }
     75%{
-        left: 45%;
+        top: 15%;
     }
     100%{
-        left: 50%;
+        top: 25%;
     }
 }
+
 /* end of modal box */

@@ -9,12 +9,13 @@ login_btn.classList.remove('show-login-form');
 navBarSignupBtn.addEventListener('click', function (){
     modalBox.style.visibility = 'visible';
     document.querySelector('.container').classList.add('inactive');
-
+    modalBox.classList.add('animation-in');
 } );
 
 x_btn.addEventListener('click', function (){
     modalBox.style.visibility = 'hidden';
     document.querySelector('.container').classList.remove('inactive');
+    modalBox.classList.remove('animation-in');
 } );
 
 login_btn.addEventListener('click', function (){
